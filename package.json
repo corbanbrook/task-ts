@@ -1,10 +1,24 @@
 {
   "name": "task-ts",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Task in typescript",
   "author": "Corban Riley",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/corbanbrook/task-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/corbanbrook/task-ts/issues"
+  },
+  "homepage": "https://github.com/corbanbrook/task-ts#readme",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
     "tslint": "tslint -c tslint.json $(find src -type f -name *.ts)",
     "tslint:fix": "tslint -c tslint.json --fix $(find src -type f -name *.ts)",
     "prettier": "prettier-check --config .prettierrc $(find src -type f -name *.ts)",
@@ -24,8 +38,7 @@
     "tslint-webpack-plugin": "^1.2.2",
     "typescript": "^3.1.6"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "jest": {
     "moduleFileExtensions": [
       "js",
