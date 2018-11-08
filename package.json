@@ -1,0 +1,53 @@
+{
+  "name": "task-ts",
+  "version": "1.0.0",
+  "description": "Task in typescript",
+  "author": "Corban Riley",
+  "license": "MIT",
+  "scripts": {
+    "tslint": "tslint -c tslint.json $(find src -type f -name *.ts)",
+    "tslint:fix": "tslint -c tslint.json --fix $(find src -type f -name *.ts)",
+    "prettier": "prettier-check --config .prettierrc $(find src -type f -name *.ts)",
+    "prettier:fix": "prettier --config .prettierrc --write $(find src -type f -name *.ts)",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "jest": "^23.6.0",
+    "prettier": "^1.14.3",
+    "prettier-check": "^2.0.0",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-webpack-plugin": "^1.2.2",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "testRegex": "/__tests__/.*\\.test\\.tsx?$",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverageFrom": [
+      "**/*.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text"
+    ]
+  }
+}

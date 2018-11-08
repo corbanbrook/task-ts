@@ -1,0 +1,12 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:recommended", "tslint-config-prettier"
+  ],
+  "jsRules": {},
+  "rules": {
+    "no-console": false,
+    "member-access": [true, "no-public"]
+  },
+  "rulesDirectory": []
+}
